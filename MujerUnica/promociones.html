@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promociones - Mujer Unica</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✨</span><span class="logo-text">MujerUnica</span>
+            </a>
+            <ul class="nav-links" id="dynamic-nav">
+                <!-- Javascript inyectará los enlaces aquí -->
+            </ul>
+            <div class="nav-actions">
+                <a href="carrito.html" class="icon-btn cart-btn" style="text-decoration:none;">
+                    🛒 <span class="badge" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <!-- BANNER DE OFERTAS: Cambia los textos o el color de fondo en el CSS -->
+        <div class="promo-banner">
+            <h2>🔥 2x1 en Colección Verano 🔥</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Aprovecha nuestras ofertas exclusivas solo por este mes. No te quedes sin tu outfit ideal.</p>
+            <button class="cta-btn" style="background: white; color: #c0392b;">Ver Colección Verano</button>
+        </div>
+
+        <div class="info-section" style="text-align: center;">
+            <h3>¿Tienes un Código de Descuento?</h3>
+            <p style="margin-bottom: 1.5rem; color: var(--text-light);">Canejea tu cupón especial y obtén rebajas automáticas en tu carrito de compras.</p>
+            
+            <div class="coupon-box">
+                <!-- FORMULARIO PARA CUPONES -->
+                <input type="text" class="coupon-input" placeholder="Ej: UNICA2026">
+                <button class="cta-btn" onclick="alert('Cupón validado. (Falta conectar backend)')">Canjear Cupón</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Mujer Unica. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

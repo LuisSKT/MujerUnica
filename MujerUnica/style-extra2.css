@@ -1,0 +1,91 @@
+/* Añadir estilos para banners y mapas al final del archivo */
+
+/* ==================================================
+   PÁGINAS INFORMATIVAS (NOSOTROS / SEDES)
+   ================================================== */
+.info-section {
+    background: var(--surface-color);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.info-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-box {
+    background: #f1f5f9;
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0 8px 8px 0;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+/* ==================================================
+   MAPAS Y SEDES
+   ================================================== */
+.sede-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.sede-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 250px;
+    background: #e2e8f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-weight: 600;
+    margin-top: 1rem;
+    border: 2px dashed #cbd5e1;
+}
+
+/* ==================================================
+   PROMOCIONES Y BANNERS
+   ================================================== */
+.promo-banner {
+    background: linear-gradient(135deg, var(--accent-color), #c0392b);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 20px rgba(231, 76, 60, 0.2);
+}
+
+.promo-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.coupon-box {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.coupon-input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    outline: none;
+}

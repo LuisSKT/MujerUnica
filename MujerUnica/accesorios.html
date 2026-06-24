@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesorios - Mujer Unica</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✨</span><span class="logo-text">MujerUnica</span>
+            </a>
+            <ul class="nav-links" id="dynamic-nav">
+                <!-- Javascript inyectará los enlaces aquí -->
+            </ul>
+            <div class="nav-actions">
+                <a href="carrito.html" class="icon-btn cart-btn" style="text-decoration:none;">
+                    🛒 <span class="badge" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <h2 class="page-title">Accesorios Exclusivos</h2>
+        
+        <div class="products-grid">
+            <!-- PLANTILLA DE ACCESORIO 1 -->
+            <article class="card">
+                <div class="card-image-wrapper">
+                    <!-- PON TU FOTO AQUÍ -->
+                    <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?auto=format&fit=crop&w=600&q=80" alt="Bolso de Cuero" class="card-image">
+                    
+                    <div class="overlay">
+                        <button class="action-btn">Detalles</button>
+                        <!-- PON EL NOMBRE Y PRECIO PARA EL CARRITO -->
+                        <button class="action-btn primary-btn" onclick="addToCart('Bolso de Cuero', 85.00)">Añadir 🛒</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <!-- PON EL NOMBRE AQUI -->
+                    <h3 class="product-name">Bolso de Cuero</h3>
+                    <!-- PON EL PRECIO AQUI -->
+                    <p class="product-price">S/ 85.00</p>
+                </div>
+            </article>
+
+            <!-- PLANTILLA DE ACCESORIO 2 -->
+            <article class="card">
+                <div class="card-image-wrapper">
+                    <!-- PON TU FOTO AQUÍ -->
+                    <img src="https://images.unsplash.com/photo-1599643478514-4a4e09b5220c?auto=format&fit=crop&w=600&q=80" alt="Collar Elegante" class="card-image">
+                    
+                    <div class="overlay">
+                        <button class="action-btn">Detalles</button>
+                        <!-- PON EL NOMBRE Y PRECIO PARA EL CARRITO -->
+                        <button class="action-btn primary-btn" onclick="addToCart('Collar Elegante', 45.50)">Añadir 🛒</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <!-- PON EL NOMBRE AQUI -->
+                    <h3 class="product-name">Collar Elegante</h3>
+                    <!-- PON EL PRECIO AQUI -->
+                    <p class="product-price">S/ 45.50</p>
+                </div>
+            </article>
+
+            <!-- COPIA Y PEGA EL BLOQUE <article> PARA AÑADIR MÁS ACCESORIOS -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Mujer Unica. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

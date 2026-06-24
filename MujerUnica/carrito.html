@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Mujer Unica</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✨</span><span class="logo-text">MujerUnica</span>
+            </a>
+            <ul class="nav-links" id="dynamic-nav">
+                <!-- Javascript inyectará los enlaces aquí dependiendo del estado de la sesión -->
+            </ul>
+            <div class="nav-actions">
+                <a href="carrito.html" class="icon-btn cart-btn active-link" style="text-decoration:none;">
+                    🛒 <span class="badge" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <h2 class="page-title">Tu Carrito de Compras</h2>
+        
+        <div class="auth-container" style="max-width: 800px;">
+            <div id="cart-items-container" class="cart-list">
+                <!-- Javascript inyectará los items del carrito aquí -->
+            </div>
+            
+            <div class="cart-total">
+                Total: S/ <span id="cart-total-price">0.00</span>
+            </div>
+
+            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <button class="cta-btn" style="background: #e74c3c; flex: 1;" onclick="emptyCart()">Vaciar Carrito</button>
+                <button class="cta-btn" style="background: #2ecc71; flex: 2;" onclick="alert('¡Procediendo al pago!')">Pagar Ahora</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Mujer Unica. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

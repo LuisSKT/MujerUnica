@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Sedes - Mujer Unica</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✨</span><span class="logo-text">MujerUnica</span>
+            </a>
+            <ul class="nav-links" id="dynamic-nav">
+                <!-- Javascript inyectará los enlaces aquí -->
+            </ul>
+            <div class="nav-actions">
+                <a href="carrito.html" class="icon-btn cart-btn" style="text-decoration:none;">
+                    🛒 <span class="badge" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <h2 class="page-title">Visita Nuestras Sedes</h2>
+        
+        <div class="sede-grid" style="grid-template-columns: 1fr; max-width: 900px; margin: 0 auto;">
+            <!-- SEDE 1 -->
+            <div class="sede-card">
+                <h3>📍 Sede Principal (San Carlos)</h3>
+                <!-- AQUI PONES LA DIRECCION DE TU SEDE 1 -->
+                <p>Av. San Carlos, San Juan de Lurigancho, Lima.</p>
+                <p><strong>Horario:</strong> Lunes a Sábado de 9AM a 8PM</p>
+                
+                <!-- AQUI PEGAS EL IFRAME DE GOOGLE MAPS -->
+                <div class="map-placeholder" style="border: none; overflow: hidden; background: transparent; height: 350px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31210.027092104592!2d-77.0094943!3d-11.9841804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5b9679f1e1f%3A0x6b4ea39bc26ab2!2sSan%20Carlos%2C%20San%20Juan%20de%20Lurigancho!5e0!3m2!1ses!2spe!4v1718000000000!5m2!1ses!2spe" width="100%" height="100%" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- SEDE 2 -->
+            <div class="sede-card">
+                <h3>📍 Sucursal Norte (Los Olivos)</h3>
+                <!-- AQUI PONES LA DIRECCION DE TU SEDE 2 -->
+                <p>Av. Carlos Izaguirre, Los Olivos, Lima.</p>
+                <p><strong>Horario:</strong> Lunes a Domingo de 10AM a 10PM</p>
+                
+                <!-- AQUI PEGAS EL IFRAME DE GOOGLE MAPS -->
+                <div class="map-placeholder" style="border: none; overflow: hidden; background: transparent; height: 350px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31213.917150153833!2d-77.0863071!3d-11.9926601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce516e8b4e7d%3A0x9a83ebbdc559828e!2sLos%20Olivos!5e0!3m2!1ses!2spe!4v1718000000000!5m2!1ses!2spe" width="100%" height="100%" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Mujer Unica. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

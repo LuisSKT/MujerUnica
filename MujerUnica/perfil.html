@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Mujer Unica</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .profile-card {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .profile-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            background: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop') center/cover;
+            color: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            cursor: pointer;
+            border: 4px solid var(--accent-color);
+        }
+        .edit-photo-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        .profile-field {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        .profile-field label {
+            display: block;
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+        .profile-field span {
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✨</span><span class="logo-text">MujerUnica</span>
+            </a>
+            <ul class="nav-links" id="dynamic-nav"></ul>
+            <div class="nav-actions">
+                <a href="carrito.html" class="icon-btn cart-btn" style="text-decoration:none;">
+                    🛒 <span class="badge" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-container" id="profile-data">
+        <h2 class="page-title">Mi Perfil</h2>
+        
+        <div class="profile-card">
+            <div class="profile-header">
+                <!-- AQUI PUEDES CAMBIAR LA FOTO EN EL ESTILO CSS O CON JAVASCRIPT -->
+                <div class="profile-avatar" id="avatar-img" onclick="alert('Funcionalidad para subir foto (Falta conectar backend)')"></div><br>
+                <button class="edit-photo-btn" onclick="alert('Elegir nueva foto...')">📷 Cambiar Foto</button>
+                <h3 id="prof-name">Maria Ejemplo</h3>
+            </div>
+
+            <div class="profile-field">
+                <label>Apellidos</label>
+                <span id="prof-lastname">Pérez Castillo (Editar)</span>
+            </div>
+            
+            <div class="profile-field">
+                <label>DNI / Documento</label>
+                <span id="prof-dni">76543210 (Editar)</span>
+            </div>
+
+            <div class="profile-field">
+                <label>Teléfono Celular</label>
+                <span id="prof-phone">999 888 777 (Editar)</span>
+            </div>
+
+            <div class="profile-field">
+                <label>Correo Electrónico</label>
+                <span id="prof-email">maria.ejemplo@gmail.com</span>
+            </div>
+            
+            <div class="profile-field">
+                <label>Talla Preferida</label>
+                <span id="prof-talla">M</span>
+            </div>
+            
+            <div class="profile-field">
+                <label>Ocupación / Profesión</label>
+                <span id="prof-ocupacion">Diseñadora Gráfica</span>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="cta-btn" onclick="handleLogout()" style="background: #e74c3c;">Cerrar Sesión</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Mujer Unica. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conjuntos - Mujer Unica</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">✨</span><span class="logo-text">MujerUnica</span>
+            </a>
+            <ul class="nav-links" id="dynamic-nav">
+                <!-- Javascript inyectará los enlaces aquí -->
+            </ul>
+            <div class="nav-actions">
+                <a href="carrito.html" class="icon-btn cart-btn" style="text-decoration:none;">
+                    🛒 <span class="badge" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <h2 class="page-title">Conjuntos de Temporada</h2>
+        
+        <div class="products-grid">
+            <!-- PLANTILLA DE PRODUCTO 1 -->
+            <article class="card">
+                <div class="card-image-wrapper">
+                    <!-- PON TU FOTO AQUÍ: Cambia el src por la ruta de tu imagen o URL -->
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" alt="Conjunto Casual" class="card-image">
+                    
+                    <div class="overlay">
+                        <button class="action-btn">Detalles</button>
+                        <!-- PON EL NOMBRE Y PRECIO EXACTO AQUI DENTRO DE LOS PARENTESIS PARA EL CARRITO -->
+                        <button class="action-btn primary-btn" onclick="addToCart('Conjunto Casual Primavera', 150.00)">Añadir 🛒</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <!-- PON EL NOMBRE DE LO QUE VAS A VENDER AQUI -->
+                    <h3 class="product-name">Conjunto Casual Primavera</h3>
+                    <!-- PON EL PRECIO AQUI -->
+                    <p class="product-price">S/ 150.00</p>
+                </div>
+            </article>
+
+            <!-- PLANTILLA DE PRODUCTO 2 -->
+            <article class="card">
+                <div class="card-image-wrapper">
+                    <!-- PON TU FOTO AQUÍ -->
+                    <img src="https://images.unsplash.com/photo-1434389678278-be4fb0fa3241?auto=format&fit=crop&w=600&q=80" alt="Conjunto Elegante" class="card-image">
+                    
+                    <div class="overlay">
+                        <button class="action-btn">Detalles</button>
+                        <!-- PON EL NOMBRE Y PRECIO EXACTO AQUI DENTRO DE LOS PARENTESIS PARA EL CARRITO -->
+                        <button class="action-btn primary-btn" onclick="addToCart('Conjunto Elegante Noche', 220.00)">Añadir 🛒</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <!-- PON EL NOMBRE DE LO QUE VAS A VENDER AQUI -->
+                    <h3 class="product-name">Conjunto Elegante Noche</h3>
+                    <!-- PON EL PRECIO AQUI -->
+                    <p class="product-price">S/ 220.00</p>
+                </div>
+            </article>
+            
+            <!-- COPIA Y PEGA EL BLOQUE <article> PARA AÑADIR MÁS CONJUNTOS -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Mujer Unica. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
