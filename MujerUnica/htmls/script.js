@@ -46,7 +46,7 @@ window.addToCart = function(productName, price) {
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
     if (!isLoggedIn) {
         alert('Debes iniciar sesión para añadir productos al carrito.');
-        const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+        const isRoot = !window.location.pathname.includes('/htmls/');
         window.location.href = isRoot ? 'htmls/login.html' : 'login.html';
         return;
     }
@@ -137,7 +137,7 @@ function renderNavbar() {
     let html = '';
 
     // Determinar si estamos en el archivo index.html o dentro de la carpeta htmls/
-    const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+    const isRoot = !window.location.pathname.includes('/htmls/');
     const prefix = isRoot ? 'htmls/' : '';
     const indexPrefix = isRoot ? '' : '../';
 
@@ -170,7 +170,7 @@ function renderNavbar() {
 
 window.handleLogout = function() {
     localStorage.removeItem('isLoggedIn');
-    const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+    const isRoot = !window.location.pathname.includes('/htmls/');
     window.location.href = isRoot ? 'index.html' : '../index.html';
 };
 
@@ -192,7 +192,7 @@ window.handleRegisterSubmit = function(event) {
     localStorage.setItem('isLoggedIn', 'true');
 
     alert('¡Registro Exitoso! Tus datos se han guardado en tu Perfil.');
-    const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+    const isRoot = !window.location.pathname.includes('/htmls/');
     window.location.href = isRoot ? 'index.html' : '../index.html';
 };
 
@@ -200,7 +200,7 @@ window.handleLoginSubmit = function(event) {
     event.preventDefault();
     alert('¡Inicio de Sesión Exitoso!');
     localStorage.setItem('isLoggedIn', 'true');
-    const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+    const isRoot = !window.location.pathname.includes('/htmls/');
     window.location.href = isRoot ? 'index.html' : '../index.html';
 };
 
