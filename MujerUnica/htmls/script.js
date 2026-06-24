@@ -46,7 +46,8 @@ window.addToCart = function(productName, price) {
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
     if (!isLoggedIn) {
         alert('Debes iniciar sesión para añadir productos al carrito.');
-        window.location.href = 'login.html';
+        const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+        window.location.href = isRoot ? 'htmls/login.html' : 'login.html';
         return;
     }
 
@@ -135,27 +136,32 @@ function renderNavbar() {
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
     let html = '';
 
+    // Determinar si estamos en el archivo index.html o dentro de la carpeta htmls/
+    const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+    const prefix = isRoot ? 'htmls/' : '';
+    const indexPrefix = isRoot ? '' : '../';
+
     if (isLoggedIn) {
         // Estado 2: Usuario Registrado
         html = `
-            <li><a href="index.html" class="${currentPath === 'index.html' ? 'active-link' : ''}">Inicio</a></li>
-            <li><a href="conjuntos.html" class="${currentPath === 'conjuntos.html' ? 'active-link' : ''}">Conjuntos</a></li>
-            <li><a href="accesorios.html" class="${currentPath === 'accesorios.html' ? 'active-link' : ''}">Accesorios</a></li>
-            <li><a href="promociones.html" class="${currentPath === 'promociones.html' ? 'active-link' : ''}">Promociones</a></li>
-            <li><a href="nosotros.html" class="${currentPath === 'nosotros.html' ? 'active-link' : ''}">Nosotros</a></li>
-            <li><a href="sedes.html" class="${currentPath === 'sedes.html' ? 'active-link' : ''}">Sedes</a></li>
-            <li><a href="envio.html" class="${currentPath === 'envio.html' ? 'active-link' : ''}">Envío</a></li>
-            <li><a href="perfil.html" class="${currentPath === 'perfil.html' ? 'active-link' : ''}">Perfil</a></li>
+            <li><a href="${indexPrefix}index.html" class="${currentPath === 'index.html' ? 'active-link' : ''}">Inicio</a></li>
+            <li><a href="${prefix}conjuntos.html" class="${currentPath === 'conjuntos.html' ? 'active-link' : ''}">Conjuntos</a></li>
+            <li><a href="${prefix}accesorios.html" class="${currentPath === 'accesorios.html' ? 'active-link' : ''}">Accesorios</a></li>
+            <li><a href="${prefix}promociones.html" class="${currentPath === 'promociones.html' ? 'active-link' : ''}">Promociones</a></li>
+            <li><a href="${prefix}nosotros.html" class="${currentPath === 'nosotros.html' ? 'active-link' : ''}">Nosotros</a></li>
+            <li><a href="${prefix}sedes.html" class="${currentPath === 'sedes.html' ? 'active-link' : ''}">Sedes</a></li>
+            <li><a href="${prefix}envio.html" class="${currentPath === 'envio.html' ? 'active-link' : ''}">Envío</a></li>
+            <li><a href="${prefix}perfil.html" class="${currentPath === 'perfil.html' ? 'active-link' : ''}">Perfil</a></li>
             <li><a href="#" onclick="handleLogout()">Cerrar Sesión</a></li>
         `;
     } else {
         // Estado 1: Visitante (Afuera)
         html = `
-            <li><a href="index.html" class="${currentPath === 'index.html' ? 'active-link' : ''}">Inicio</a></li>
-            <li><a href="catalogo.html" class="${currentPath === 'catalogo.html' ? 'active-link' : ''}">Catálogo</a></li>
-            <li><a href="nosotros.html" class="${currentPath === 'nosotros.html' ? 'active-link' : ''}">Nosotros</a></li>
-            <li><a href="sedes.html" class="${currentPath === 'sedes.html' ? 'active-link' : ''}">Sedes</a></li>
-            <li><a href="login.html" class="${currentPath === 'login.html' || currentPath === 'registro.html' ? 'active-link' : ''}">Regístrese</a></li>
+            <li><a href="${indexPrefix}index.html" class="${currentPath === 'index.html' ? 'active-link' : ''}">Inicio</a></li>
+            <li><a href="${prefix}catalogo.html" class="${currentPath === 'catalogo.html' ? 'active-link' : ''}">Catálogo</a></li>
+            <li><a href="${prefix}nosotros.html" class="${currentPath === 'nosotros.html' ? 'active-link' : ''}">Nosotros</a></li>
+            <li><a href="${prefix}sedes.html" class="${currentPath === 'sedes.html' ? 'active-link' : ''}">Sedes</a></li>
+            <li><a href="${prefix}login.html" class="${currentPath === 'login.html' || currentPath === 'registro.html' ? 'active-link' : ''}">Regístrese</a></li>
         `;
     }
 
@@ -164,7 +170,8 @@ function renderNavbar() {
 
 window.handleLogout = function() {
     localStorage.removeItem('isLoggedIn');
-    window.location.href = 'index.html';
+    const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+    window.location.href = isRoot ? 'index.html' : '../index.html';
 };
 
 /* ==========================================================================
@@ -185,14 +192,16 @@ window.handleRegisterSubmit = function(event) {
     localStorage.setItem('isLoggedIn', 'true');
 
     alert('¡Registro Exitoso! Tus datos se han guardado en tu Perfil.');
-    window.location.href = 'index.html';
+    const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+    window.location.href = isRoot ? 'index.html' : '../index.html';
 };
 
 window.handleLoginSubmit = function(event) {
     event.preventDefault();
     alert('¡Inicio de Sesión Exitoso!');
     localStorage.setItem('isLoggedIn', 'true');
-    window.location.href = 'index.html';
+    const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+    window.location.href = isRoot ? 'index.html' : '../index.html';
 };
 
 window.loadProfileData = function() {
