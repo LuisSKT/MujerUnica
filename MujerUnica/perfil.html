@@ -22,7 +22,7 @@
         .profile-avatar {
             width: 120px;
             height: 120px;
-            background: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop') center/cover;
+            background: #cbd5e1; /* Fondo gris simple para foto futura */
             color: white;
             border-radius: 50%;
             display: inline-flex;
@@ -83,25 +83,25 @@
         
         <div class="profile-card">
             <div class="profile-header">
-                <!-- AQUI PUEDES CAMBIAR LA FOTO EN EL ESTILO CSS O CON JAVASCRIPT -->
-                <div class="profile-avatar" id="avatar-img" onclick="alert('Funcionalidad para subir foto (Falta conectar backend)')"></div><br>
+                <!-- AQUI PUEDES CAMBIAR LA FOTO CON JAVASCRIPT LUEGO -->
+                <div class="profile-avatar" id="avatar-img" onclick="alert('Funcionalidad para subir foto (Falta conectar backend)')">👤</div><br>
                 <button class="edit-photo-btn" onclick="alert('Elegir nueva foto...')">📷 Cambiar Foto</button>
                 <h3 id="prof-name">Maria Ejemplo</h3>
             </div>
 
             <div class="profile-field">
                 <label>Apellidos</label>
-                <span id="prof-lastname">Pérez Castillo (Editar)</span>
+                <span id="prof-lastname">Pérez Castillo</span>
             </div>
             
             <div class="profile-field">
                 <label>DNI / Documento</label>
-                <span id="prof-dni">76543210 (Editar)</span>
+                <span id="prof-dni">76543210</span>
             </div>
 
             <div class="profile-field">
                 <label>Teléfono Celular</label>
-                <span id="prof-phone">999 888 777 (Editar)</span>
+                <span id="prof-phone">999 888 777</span>
             </div>
 
             <div class="profile-field">

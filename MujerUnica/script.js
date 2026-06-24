@@ -10,10 +10,10 @@ const BackendService = {
         return new Promise(resolve => {
             setTimeout(() => {
                 resolve([
-                    { id: 1, name: 'Chaqueta de Cuero Vintage', price: 120.00, imageUrl: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80', isNew: true },
+                    { id: 1, name: 'Chaqueta de Cuero Vintage', price: 120.00, imageUrl: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80', isNew: true },
                     { id: 2, name: 'Camiseta Básica Premium', price: 25.50, imageUrl: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80', isNew: false },
-                    { id: 3, name: 'Pantalón Vaquero Slim', price: 59.99, imageUrl: 'https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80', isNew: false },
-                    { id: 4, name: 'Zapatillas Urbanas', price: 85.00, imageUrl: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80', isNew: true }
+                    { id: 3, name: 'Pantalón Vaquero Slim', price: 59.99, imageUrl: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80', isNew: false },
+                    { id: 4, name: 'Zapatillas Urbanas', price: 85.00, imageUrl: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80', isNew: true }
                 ]);
             }, 500);
         });
@@ -66,11 +66,10 @@ window.emptyCart = function() {
 ========================================================================== */
 
 function createProductCard(product) {
-    const isNewBadge = product.isNew ? `<span class="badge-new">Nuevo</span>` : '';
     return `
         <article class="card">
             <div class="card-image-wrapper">
-                ${isNewBadge}
+                <!-- AQUI VA TU FOTO, CAMBIA EL SRC -->
                 <img src="${product.imageUrl}" alt="${product.name}" class="card-image">
                 <div class="overlay">
                     <button class="action-btn">Detalles</button>
